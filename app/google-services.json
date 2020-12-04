@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "372168474473",
+    "firebase_url": "https://qcbuddy370.firebaseio.com",
+    "project_id": "qcbuddy370",
+    "storage_bucket": "qcbuddy370.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372168474473:android:85716ec46054acd66b87f8",
+        "android_client_info": {
+          "package_name": "com.example.cs370_qcbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372168474473-rrm9g8ilt92hplcngmkq7s9r7dtp809p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIxryqAf0pnSEA3TOzY_UAmk9afUQdoic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372168474473-rrm9g8ilt92hplcngmkq7s9r7dtp809p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

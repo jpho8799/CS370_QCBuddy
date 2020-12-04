@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- ******************editProfile Relative Layout 1 **********************-->
+        <RelativeLayout
+            android:id="@+id/editProfile_relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <include layout = "@layout/snippet_top_editprofiletoolbar"/>
+        </RelativeLayout>
+        <!-- ********************editProfile Relative Layout 1 *******************************-->
+        <!-- ********************editProfile Relative Layout 2 *******************************-->
+        <RelativeLayout
+                android:id="@+id/editProfile_relLayout2"
+                android:layout_below="@+id/editProfile_relLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        </RelativeLayout>
+        <!-- ********************editProfile Relative Layout 2 *******************************-->
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
