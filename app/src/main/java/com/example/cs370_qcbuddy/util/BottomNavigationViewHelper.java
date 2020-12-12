@@ -36,11 +36,11 @@ public class BottomNavigationViewHelper {
                         Intent intent2 = new Intent(context, SearchActivity.class);
                         context.startActivity(intent2);
                         break;
-                    case R.id.ic_appointment:
+                    case R.id.ic_message:
                         Intent intent3 = new Intent(context, MessageActivity.class);
                         context.startActivity(intent3);
                         break;
-                    case R.id.ic_message:
+                    case R.id.ic_appointment:
                         Intent intent4 = new Intent(context, AppointmentActivity.class);
                         context.startActivity(intent4);
                         break;

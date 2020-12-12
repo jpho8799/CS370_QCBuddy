@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.example.cs370_qcbuddy.Appointment.AppointmentActivity;
 import com.example.cs370_qcbuddy.Login.LoginActivity;
 import com.example.cs370_qcbuddy.R;
 import com.example.cs370_qcbuddy.util.BottomNavigationViewHelper;
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         webview.loadUrl("https://www.cs.qc.cuny.edu/");
 
 
-        //setupFirebaseAuth();
+        setupFirebaseAuth();
 
         setupBottomNavigationView();
     }
@@ -59,49 +58,49 @@ public class MainActivity extends AppCompatActivity {
      */
 
     //check to see if @param 'user' is logged in
-//    private void checkCurrentUser(FirebaseUser user){
-//        Log.d(TAG, "checkCurrentUser: checking if user is logged in");
-//
-//        if(user == null){
-//            Intent intent = new Intent(mContext, LoginActivity.class);
-//            startActivity(intent);
-//        }
-//    }
-//    private void setupFirebaseAuth(){
-//        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth");
-//        mAuth = FirebaseAuth.getInstance();
-//        mAuthListener = new FirebaseAuth.AuthStateListener() {
-//            @Override
-//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-//                FirebaseUser user = firebaseAuth.getCurrentUser();
-//                //check if user is logged in
-//                checkCurrentUser(user);
-//                if(user != null){
-//                    //User is signed in
-//                    Log.d(TAG, "onAuthStateChanged:signed in:" + user.getUid());
-//
-//                } else {
-//                    //User is signed out
-//                    Log.d(TAG, "onAuthStateChanged:signed out");
-//                }
-//            }
-//        };
-//    }
-//
-//    @Override
-//    public void onStart(){
-//        super.onStart();
-//        mAuth.addAuthStateListener(mAuthListener);
-//        checkCurrentUser(mAuth.getCurrentUser());
-//    }
-//
-//    @Override
-//    public void onStop(){
-//        super.onStop();
-//        if(mAuthListener !=null) {
-//            mAuth.removeAuthStateListener(mAuthListener);
-//        }
-//    }
+    private void checkCurrentUser(FirebaseUser user){
+        Log.d(TAG, "checkCurrentUser: checking if user is logged in");
+
+        if(user == null){
+            Intent intent = new Intent(mContext, LoginActivity.class);
+            startActivity(intent);
+        }
+    }
+    private void setupFirebaseAuth(){
+        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth");
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                //check if user is logged in
+                checkCurrentUser(user);
+                if(user != null){
+                    //User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed in:" + user.getUid());
+
+                } else {
+                    //User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed out");
+                }
+            }
+        };
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+        checkCurrentUser(mAuth.getCurrentUser());
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        if(mAuthListener !=null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
 
     /*-------------------------------------------Firebase -----------------------------------------
 

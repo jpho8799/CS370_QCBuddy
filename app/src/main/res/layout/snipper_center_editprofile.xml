@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,13 +30,36 @@
                 android:textColor="@color/linkblue"
                 android:textSize="16sp"/>
 
+            <!-- name amd email section -->
+            <RelativeLayout
+                android:id="@+id/email_and_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/changeProfilePhoto"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/grey_border_bottom"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:text="Name and Email"
+                    android:textSize="20dp"
+                    android:textColor="@color/grey"/>
+
+
+
+            </RelativeLayout>
             <!-- name section -->
             <RelativeLayout
                 android:id="@+id/editname_relLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/changeProfilePhoto"
-                android:layout_marginTop="50dp"
+                android:layout_below="@+id/email_and_name"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/grey_border_bottom"
                 >
 
@@ -56,11 +79,6 @@
                     android:inputType="textNoSuggestions"
                     android:hint="username"/>
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_profile"
-                    android:layout_centerVertical="true"/>
 
             </RelativeLayout>
 
@@ -90,47 +108,47 @@
                     android:hint="Email"/>
 
             </RelativeLayout>
+            <!--  ************** end of name and email section  *************-->
+
+            <!-- class/tutoring info  ********************-->
+
+            <!-- name amd email section -->
+            <RelativeLayout
+                android:id="@+id/class_and_tutoring"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/editemail_relLayout"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/grey_border_bottom"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:background="@null"
+                    android:text="Basic Info"
+                    android:textSize="20dp"
+                    android:textColor="@color/grey"/>
+
+
+
+            </RelativeLayout>
 
             <!-- display classes tutoring section -->
             <RelativeLayout
                 android:id="@+id/edittutoring_relLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/editemail_relLayout"
+                android:layout_below="@+id/class_and_tutoring"
                 android:background="@drawable/grey_border_bottom"
                 android:layout_marginTop="15dp">
 
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/ic_currentclass"
-                    android:layout_centerVertical="true"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/display_name"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="40dp"
-                    android:background="@null"
-                    android:inputType="textNoSuggestions"
-                    android:hint="tutoring"/>
-
-            </RelativeLayout>
-
-            <!-- display_current class section -->
-            <RelativeLayout
-                android:id="@+id/editcurrentclass_relLayout"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@+id/edittutoring_relLayout"
-                android:background="@drawable/grey_border_bottom"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_currentclass"
+                    android:src="@drawable/ic_tutor"
                     android:layout_centerVertical="true"/>
 
                 <EditText
@@ -141,10 +159,130 @@
                     android:layout_marginStart="40dp"
                     android:background="@null"
                     android:inputType="textNoSuggestions"
-                    android:hint="current classes"/>
+                    android:hint="tutoring"/>
+
+                <ImageView
+                    android:id="@+id/edittutoring_arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="11dp"
+                    app:srcCompat="@drawable/ic_forwardarrow" />
+
 
             </RelativeLayout>
 
+            <!-- display tutoring hourly rate section -->
+            <RelativeLayout
+                android:id="@+id/editprice_relLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edittutoring_relLayout"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_price"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/display_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:hint="hourly rate"/>
+
+                <ImageView
+                    android:id="@+id/editprice_arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="11dp"
+                    app:srcCompat="@drawable/ic_forwardarrow" />
+
+            </RelativeLayout>
+
+            <!-- display_current class section -->
+            <RelativeLayout
+                android:id="@+id/editcurrentclass_relLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/editprice_relLayout"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_class"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/display_currentclass"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:hint="current classes"/>
+
+                <ImageView
+                    android:id="@+id/editcurrentclass_arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="11dp"
+                    app:srcCompat="@drawable/ic_forwardarrow" />
+
+            </RelativeLayout>
+
+            <!-- display past courses section -->
+            <RelativeLayout
+                android:id="@+id/editpastclass_relLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/editcurrentclass_relLayout"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_past"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/display_pastclass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:hint="past classes"/>
+                <ImageView
+                    android:id="@+id/editpastcourse_arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="11dp"
+                    app:srcCompat="@drawable/ic_forwardarrow" />
+
+            </RelativeLayout>
 
 
 

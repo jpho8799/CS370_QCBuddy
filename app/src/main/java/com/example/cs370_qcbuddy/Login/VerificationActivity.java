@@ -92,28 +92,14 @@ public class VerificationActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
 
-                    mAuthListener = new FirebaseAuth.AuthStateListener(){
-                        @Override
-                        public  void  onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
-                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                            //if new user go to Profile
-                            if(user!=null){
-                                Intent intent = new Intent(mContext, ProfileActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                startActivity(intent);
-                                finish();
-                            }else{
-                                //if user already exist, go to Home
-                                Intent intent = new Intent(mContext, MainActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                startActivity(intent);
-                            }
-                        }
 
+                    Log.d(TAG, "signInWithCredential:success");
+                    Intent intent = new Intent(mContext, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
 
-                    };
-
-                }else{
+                } else{
                     Toast.makeText(mContext, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }

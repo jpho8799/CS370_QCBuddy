@@ -27,6 +27,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
     private SectionStatePagerAdapter pagerAdapter;
     private ViewPager mViewPager;
     private RelativeLayout mRelativeLayout;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
         mViewPager = findViewById(R.id.container);
         mRelativeLayout = findViewById(R.id.accountsetting_relLayout1);
         setUpSettingsList();
+        setupFragment();
         //set up backarrow to go back to profile activity
         ImageView backArrow =  findViewById(R.id.backArrow);
         backArrow.setOnClickListener(v -> {
@@ -44,10 +46,12 @@ public class AccountSettingsActivity extends AppCompatActivity {
         });
     }
 
-    private void setupFragments(){
+    private void setupFragment(){
+        // Add new tabs to tablayout
         pagerAdapter = new SectionStatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         pagerAdapter.addFragment(new EditProfileFragment(), getString(R.string.edit_profile_fragment)); //fragment 0
         pagerAdapter.addFragment(new SignOutFragment(), getString(R.string.sign_out_fragment)); //fragment 1
+        pagerAdapter.addFragment(new ScheduleFragment(), getString(R.string.schedule_fragment)); //fragment 2
 
     }
 

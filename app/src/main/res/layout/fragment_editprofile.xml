@@ -5,23 +5,24 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <!-- ******************editProfile Relative Layout 1 **********************-->
         <RelativeLayout
             android:id="@+id/editProfile_relLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <include layout = "@layout/snippet_top_editprofiletoolbar"/>
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/snippet_top_editprofiletoolbar" />
         </RelativeLayout>
         <!-- ********************editProfile Relative Layout 1 *******************************-->
         <!-- ********************editProfile Relative Layout 2 *******************************-->
         <RelativeLayout
-                android:id="@+id/editProfile_relLayout2"
-                android:layout_below="@+id/editProfile_relLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:id="@+id/editProfile_relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editProfile_relLayout1">
 
+            <include layout="@layout/snipper_center_editprofile" />
         </RelativeLayout>
         <!-- ********************editProfile Relative Layout 2 *******************************-->
 

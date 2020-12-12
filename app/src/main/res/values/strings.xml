@@ -10,4 +10,10 @@
     <string name = "edit_profile_fragment">Edit Profile</string>
     <string name = "sign_out_fragment">Sign Out</string>
 
+    <!-- Tab Tool Bar -->
+    <string name = "basic_info_fragment">Basic Info</string>
+    <string name = "reviews_fragment">Reviews</string>
+    <string name = "schedule_fragment">Schedule</string>
+
+
 </resources>

@@ -87,68 +87,6 @@
                     android:text="email@email.com"
                     android:textSize="16sp"
                     />
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/linLayout"
-                    android:columnCount="2"
-                    android:paddingTop="10dp">
-
-                    <TextView
-                        android:id="@+id/tutoring_courses"
-                        android:layout_columnWeight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="Tutoring: "
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/hourly_rate"
-                        android:layout_columnWeight="1"
-                        android:paddingTop="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:textColor="@color/black"
-                        android:text="Hourly Rate: "
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/class_standing"
-                        android:layout_columnWeight="1"
-                        android:paddingTop="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="Class Standing: "
-                        android:textSize="16sp"
-                        />
-                    <TextView
-                        android:id="@+id/current_courses"
-                        android:layout_columnWeight="1"
-                        android:paddingTop="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="Current Courses: "
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/previous_courses"
-                        android:layout_columnWeight="1"
-                        android:paddingTop="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="Previous Courses: "
-                        android:textSize="16sp"
-                        />
-                </GridLayout>
-
 
             </LinearLayout>
 
@@ -159,7 +97,14 @@
         </RelativeLayout>
         <!-- ***************** end of middle section *************************-->
 
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relLayout2">
+            <include layout = "@layout/layout_tabviews"/>
 
+        </RelativeLayout>
     </RelativeLayout>
 
 </merge>

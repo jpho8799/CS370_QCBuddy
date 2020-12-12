@@ -10,12 +10,14 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class SectionStatePagerAdapter extends FragmentStatePagerAdapter {
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final HashMap<Fragment, Integer> mFragment = new HashMap<>();
     private final HashMap<String, Integer> mFragmentNumbers = new HashMap<>();
     private final HashMap<Integer, String> mFragmentNames = new HashMap<>();
+
 
     public SectionStatePagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
@@ -27,7 +29,7 @@ public class SectionStatePagerAdapter extends FragmentStatePagerAdapter {
 
     }
 
-    @NonNull
+
     @Override
     public Fragment getItem(int position) {
         return mFragmentList.get(position);
