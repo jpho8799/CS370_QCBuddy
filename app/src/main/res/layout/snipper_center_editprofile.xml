@@ -46,22 +46,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:background="@null"
-                    android:text="Basic Profile Info"
+                    android:text="Name and Email"
                     android:textSize="20dp"
                     android:textColor="@color/grey"/>
 
-                <TextView
-                    android:id="@+id/save_changes1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="11dp"
-                    android:background="@null"
-                    android:text="Save Changes"
-                    android:textSize="12dp"
-                    android:textColor="@color/grey"/>
 
 
             </RelativeLayout>
@@ -81,27 +69,15 @@
                     android:src="@drawable/ic_profile"
                     android:layout_centerVertical="true"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name:"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="40dp"
-                    android:textSize="18dp"
-                    android:textColor="@color/grey"
-
-
-                    />
-
-
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/username"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="100dp"
+                    android:layout_marginStart="40dp"
                     android:background="@null"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textNoSuggestions"
+                    android:hint="username"/>
 
 
             </RelativeLayout>
@@ -121,80 +97,27 @@
                     android:src="@drawable/ic_email"
                     android:layout_centerVertical="true"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email:"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="40dp"
-                    android:textSize="18dp"
-                    android:textColor="@color/grey"
-
-
-                    />
-
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/email"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="100dp"
-                    android:background="@null"
-                    android:inputType="textEmailAddress" />
-
-
-
-            </RelativeLayout>
-
-            <!-- standing section -->
-            <RelativeLayout
-                android:id="@+id/editstanding_relLayout"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@+id/editemail_relLayout"
-                android:background="@drawable/grey_border_bottom"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_email"
-                    android:layout_centerVertical="true"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Class Standing:"
-                    android:layout_centerVertical="true"
                     android:layout_marginStart="40dp"
-                    android:textSize="18dp"
-                    android:textColor="@color/grey"
-
-
-                    />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/standing"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="170dp"
                     android:background="@null"
-                    android:inputType="textNoSuggestions" />
-
-
+                    android:inputType="textNoSuggestions"
+                    android:hint="Email"/>
 
             </RelativeLayout>
             <!--  ************** end of name and email section  *************-->
 
             <!-- class/tutoring info  ********************-->
 
-            <!-- class and tutoring -->
+            <!-- name amd email section -->
             <RelativeLayout
                 android:id="@+id/class_and_tutoring"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/editstanding_relLayout"
+                android:layout_below="@+id/editemail_relLayout"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/grey_border_bottom"
                 >
@@ -205,24 +128,9 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="5dp"
                     android:background="@null"
-                    android:text="Advance Info"
+                    android:text="Basic Info"
                     android:textSize="20dp"
                     android:textColor="@color/grey"/>
-
-
-                <TextView
-                    android:id="@+id/save_changes2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="11dp"
-                    android:background="@null"
-                    android:text="Save Changes"
-                    android:textSize="12dp"
-                    android:textColor="@color/grey"/>
-
 
 
 
@@ -243,7 +151,7 @@
                     android:src="@drawable/ic_tutor"
                     android:layout_centerVertical="true"/>
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/display_tutoring"
@@ -251,9 +159,7 @@
                     android:layout_marginStart="40dp"
                     android:background="@null"
                     android:inputType="textNoSuggestions"
-                    android:text="tutoring"
-                    android:textColor="@color/grey"
-                    android:textSize="18dp"/>
+                    android:hint="tutoring"/>
 
                 <ImageView
                     android:id="@+id/edittutoring_arrow"
@@ -283,26 +189,25 @@
                     android:src="@drawable/ic_price"
                     android:layout_centerVertical="true"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="40dp"
-                    android:background="@null"
-                    android:text="hourly rate:"
-                    android:textSize="18dp"
-                    android:textColor="@color/grey" />
-
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/edit_price"
+                    android:id="@+id/display_name"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="150dp"
+                    android:layout_marginStart="40dp"
                     android:background="@null"
-                    android:inputType="numberDecimal" />
+                    android:inputType="textNoSuggestions"
+                    android:hint="hourly rate"/>
 
-
+                <ImageView
+                    android:id="@+id/editprice_arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="11dp"
+                    app:srcCompat="@drawable/ic_forwardarrow" />
 
             </RelativeLayout>
 
@@ -321,7 +226,7 @@
                     android:src="@drawable/ic_class"
                     android:layout_centerVertical="true"/>
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/display_currentclass"
@@ -329,11 +234,7 @@
                     android:layout_marginStart="40dp"
                     android:background="@null"
                     android:inputType="textNoSuggestions"
-                    android:text="current classes"
-                    android:textColor="@color/grey"
-                    android:textSize="18dp"/>
-
-
+                    android:hint="current classes"/>
 
                 <ImageView
                     android:id="@+id/editcurrentclass_arrow"
@@ -362,16 +263,15 @@
                     android:src="@drawable/ic_past"
                     android:layout_centerVertical="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/display_pastclass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="40dp"
                     android:background="@null"
-                    android:text="past classes:"
-                    android:textSize="18dp"
-                    android:textColor="@color/grey"/>
+                    android:inputType="textNoSuggestions"
+                    android:hint="past classes"/>
                 <ImageView
                     android:id="@+id/editpastcourse_arrow"
                     android:layout_width="25dp"

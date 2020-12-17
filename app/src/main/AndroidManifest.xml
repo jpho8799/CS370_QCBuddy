@@ -8,9 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CS370_QCBuddy"
-        android:usesCleartextTraffic="true"
-        >
+        android:theme="@style/Theme.CS370_QCBuddy">
         <activity android:name=".Home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +23,6 @@
         <activity android:name=".Profile.AccountSettingsActivity"></activity>
         <activity android:name=".Login.LoginActivity"></activity>
         <activity android:name=".Login.VerificationActivity"></activity>
-        <activity android:name =".Test.ConnectToServlet"></activity>
 
 
     </application>

@@ -7,9 +7,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,13 +28,6 @@ public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "ProfileActivity";
     private static final int ACTIVITY_NUM =4;
 
-
-    //testing delete later
-    EditText mUserID;
-    EditText mName;
-    EditText mEmail;
-    EditText mStanding;
-    String URL = "http://localhost:8080/CS370_QCBuddy/EditProfileServlet";
 
     private ProgressBar mProgressBar;
 
@@ -64,12 +57,9 @@ public class ProfileActivity extends AppCompatActivity {
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
-
-
         setupBottomNavigationView();
 
     }
-
 
     //set up top tool bar
     private void setupToolbar(){
