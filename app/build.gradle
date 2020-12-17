@@ -26,7 +26,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src\\main\\java', 'src\\main\\java\\Test', 'src\\main\\java\\com.example.cs370_qcbuddy\\Test'
+            }
+        }
+    }
 }
+
 
 dependencies {
     /*Too many dependencies in code, eventually need to go to https://developer.android.com/studio/build/multidex
@@ -57,9 +65,7 @@ dependencies {
     implementation 'androidx.browser:browser:1.2.0'
 
     implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
-
-
-
+    implementation 'com.android.volley:volley:1.1.1'
 
 
 

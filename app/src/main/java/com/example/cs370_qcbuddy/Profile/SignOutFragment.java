@@ -1,6 +1,5 @@
 package com.example.cs370_qcbuddy.Profile;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,10 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.cs370_qcbuddy.Login.LoginActivity;
 import com.example.cs370_qcbuddy.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class SignOutFragment extends Fragment {
     private static final String TAG = "SignOutFragment";
@@ -39,7 +36,7 @@ public class SignOutFragment extends Fragment {
         mProgressBar.setVisibility(View.GONE);
         tvSigningOut.setVisibility(View.GONE);
         Button btnConfirmSignout = view.findViewById(R.id.btnConfirmSignout);
-        setupFirebaseAuth();
+        //setupFirebaseAuth();
 
         btnConfirmSignout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,44 +52,44 @@ public class SignOutFragment extends Fragment {
 
     //-------------------------------Firebase ------------------------------------------------------
 
-    private void setupFirebaseAuth() {
-        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth");
-        mAuth = FirebaseAuth.getInstance();
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                //check if user is logged in
-                if (user != null) {
-                    //User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed in:" + user.getUid());
-
-                } else {
-                    //User is signed out
-                    Log.d(TAG, "onAuthStateChanged:signed out");
-                    Log.d(TAG, "navigating back to login screen");
-                    Intent intent = new Intent(getActivity(), LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                }
-            }
-        };
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
-    }
+//    private void setupFirebaseAuth() {
+//        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth");
+//        mAuth = FirebaseAuth.getInstance();
+//        mAuthListener = new FirebaseAuth.AuthStateListener() {
+//            @Override
+//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                FirebaseUser user = firebaseAuth.getCurrentUser();
+//                //check if user is logged in
+//                if (user != null) {
+//                    //User is signed in
+//                    Log.d(TAG, "onAuthStateChanged:signed in:" + user.getUid());
+//
+//                } else {
+//                    //User is signed out
+//                    Log.d(TAG, "onAuthStateChanged:signed out");
+//                    Log.d(TAG, "navigating back to login screen");
+//                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                }
+//            }
+//        };
+//    }
+//
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        mAuth.addAuthStateListener(mAuthListener);
+//
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        if (mAuthListener != null) {
+//            mAuth.removeAuthStateListener(mAuthListener);
+//        }
+//    }
     /*-------------------------------------------Firebase -----------------------------------------
      */
 }
